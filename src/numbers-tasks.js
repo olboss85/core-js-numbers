@@ -424,8 +424,9 @@ function getNumberValue(number) {
  * 5        => true
  * '5'      => false
  */
+
 function isNumber(number) {
-  return typeof number === 'number' && !Number.isNaN(number);
+  return Number.isFinite(number);
 }
 
 /**
@@ -608,9 +609,6 @@ function getRandomInteger(min, max) {
  * 3, 4 => 5
  */
 function getHypotenuse(a, b) {
-  if (!Number.isFinite(a) || !Number.isFinite(b)) {
-    return Infinity;
-  }
   return Math.sqrt(a ** 2 + b ** 2);
 }
 
